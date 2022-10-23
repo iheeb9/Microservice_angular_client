@@ -5,5 +5,7 @@
 
 export const environment = {
   production: false,
-  url:"/auth/"
+  url:"/auth/",
+  serveur:"http://localhost:8082/api/locations"
+
 };
