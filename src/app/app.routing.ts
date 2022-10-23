@@ -9,9 +9,26 @@ import { LoginComponent } from './login/login.component';
 import { LoginGuard } from './guard/login.guard';
 import { AuthGuard } from './guard/auth.guard';
 import { UsersComponent } from './layouts/user_Layout/users.component';
-
+import {EventsComponent} from './back/events/events.component';
+import { DetailsEventComponent } from './back/details-event/details-event.component';
+import { AddEventComponent } from './back/add-event/add-event.component';
 const routes: Routes =[
+  
+  /*-------------------Events--------------------------*/
   {
+    path : 'events',
+    component: EventsComponent,
+    canActivate:[] 
+  },
+  { path: 'event/:id', component: DetailsEventComponent },
+
+  { path: 'event/add', component: AddEventComponent },
+
+
+    /*-------------------Events--------------------------*/
+
+{
+    /*-------------------Events--------------------------*/
     path: '',
     redirectTo: 'login',
     pathMatch: 'full',
