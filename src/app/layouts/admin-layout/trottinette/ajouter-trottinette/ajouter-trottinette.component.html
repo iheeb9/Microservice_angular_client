@@ -1,0 +1,75 @@
+<p>ajouter-trottinette works!</p>
+<div class="panel-header panel-header-sm">
+</div>
+<div class="main-content">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="title">Ajouter Trottinette</h5>
+        </div>
+        <div class="card-body">
+          <form  [formGroup]="ProduitForm" (ngSubmit)="submit()">
+            <div class="row">
+          
+              <div class="col-md-3 px-1">
+                <div class="form-group">
+                  <label>Nom</label>
+                  <input type="text" name="name" id="name"  [formControlName]="'name'"class="form-control" placeholder="Username">
+                </div>
+              </div>
+              <div class="col-md-4 pl-1">
+                <div class="form-group">
+                  <label >prix</label>
+                  <input  name="price" id="price" [formControlName]="'price'" id="price" type="text" class="form-control" placeholder="Email">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 pr-1">
+                <div class="form-group">
+                  <label>Description</label>
+                  <input type="text" name="description" id="description" [formControlName]="'description'" class="form-control" placeholder="Company" value="Mike">
+                </div>
+              </div>
+                <div class="col-md-4 pr-1">
+                  <i class="now-ui-icons arrows-1_cloud-upload-94"></i>
+                  <div class="form-group" >
+                      <label >click Here to uplaod </label>
+                      <input type="file" (change)="onSelectFile($event)" style="cursor: pointer" class="form-control" placeholder="img Produit" >
+              </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group">
+                <div class="col-12 " >
+                  <label>categorie</label>
+                  <ng-multiselect-dropdown
+                          [placeholder]="'choisir categorie'"
+                          [settings]="dropdownSettings"
+                          [data]="cat"
+                          [formControlName]="'categorie'"        >
+                  </ng-multiselect-dropdown>
+
+                </div>
+              </div>
+          </div>
+            <div class="row">    
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label>About Me</label>
+                  <textarea rows="4" cols="80" class="form-control" placeholder="Here can be your description" value="Mike">Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo.</textarea>
+                </div>
+              </div>
+            </div>
+            <button _ngcontent-c3  class="btn btn-primary btn-simple btn-round" type="submit">
+              <i class="now-ui-icons ui-1_simple-add"></i>Save Product</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+</div>

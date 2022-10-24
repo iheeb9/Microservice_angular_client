@@ -1,10 +1,28 @@
 {
 
+"/auth/*": {
+"target": "http://localhost:3000/auth",
+"secure": false,
+"logLevel": "debug",
+"changeOrigin": true,
+"pathRewrite": {"^/auth" : ""}
+},
+"/trottinette/*": {
+    "target": "http://localhost:8083/trottinette",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true,
+    "pathRewrite": {
+        "^/trottinette": ""
+    }
+},
+
 "/balade/*": {
     "target": "http://localhost:8081/balade/",
     "secure": false,
     "logLevel": "debug",
     "changeOrigin": true,
     "pathRewrite": {"^/balade" : ""}
+
     }
 }

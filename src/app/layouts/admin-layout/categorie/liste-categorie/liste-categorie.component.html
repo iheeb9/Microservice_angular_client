@@ -1,0 +1,51 @@
+<p>liste-categorie works!</p>
+<div class="panel-header panel-header-sm">
+</div>
+<div class="main-content">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title"> Liste des categorie</h4>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table">
+              <thead class=" text-primary">
+                <th>
+                  Id_categorie
+                </th>
+                <th >
+                  Nom_categorie
+                </th>
+                <th >
+                  Actions
+                </th>
+              </thead>
+              <tbody *ngFor="let cat of cats   ">
+                <tr>
+                  <td>
+                    {{cat.idCategorie}}
+                  </td>
+                  
+                  <td >
+                    {{cat.nomCategorie}}
+                  </td>
+                  <td >
+                   
+                        <button class="btn btn-warning" (click)="goToEdit(cat.idCategorie)" style="background-color: rgb(255, 187, 0);"><i style="font-size: 15px; " class="now-ui-icons ui-1_settings-gear-63"></i></button> &nbsp;
+
+                    <button (click)="deleteCategorie(cat)"  class="btn btn-danger"  style="background-color:red" type="button">
+                      <i class="now-ui-icons ui-1_simple-remove"></i></button>
+                </td>
+              </tr>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+</div>

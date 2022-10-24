@@ -5,6 +5,9 @@
 
 export const environment = {
   production: false,
+<<<<<<< HEAD
+  url:"http://localhost:8083/trottinette" 
+=======
 
   url:"/balade/"
 
@@ -12,4 +15,5 @@ export const environment = {
   serveur:"http://localhost:8082/api/locations"
 
 
+>>>>>>> de64238a43421a5f52f290dd69b84efc5ee5d262
 };
