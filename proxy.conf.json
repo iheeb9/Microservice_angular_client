@@ -6,11 +6,11 @@
 "changeOrigin": true,
 "pathRewrite": {"^/auth" : ""}
 },
-"/balade/*": {
-    "target": "http://localhost:8081/api/",
+"/trottinette/*": {
+    "target": "http://localhost:8083/trottinette",
     "secure": false,
     "logLevel": "debug",
     "changeOrigin": true,
-    "pathRewrite": {"^/api" : ""}
+    "pathRewrite": {"^/trottinette" : ""}
     }
 }

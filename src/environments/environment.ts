@@ -5,5 +5,5 @@
 
 export const environment = {
   production: false,
-  url:"/auth/"
+  url:"http://localhost:8083/trottinette" 
 };

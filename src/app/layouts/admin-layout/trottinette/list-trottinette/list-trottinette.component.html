@@ -1,0 +1,71 @@
+<p>list-trottinette works!</p>
+<div class="panel-header panel-header-sm">
+</div>
+<div class="main-content">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title"> Liste trottinette</h4>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table">
+              <thead class=" text-primary">
+                <th>
+                  Nom
+                </th>
+                <th>
+                  Prix
+                </th>
+                <th>
+                  Description
+                </th>
+                <th>
+                  image
+                </th>
+                <th>
+                  Action
+                </th>
+
+              </thead>
+              <tbody *ngFor="let trot of trottinette" >
+                <tr>
+                  <td>
+                    {{trot.name}}
+                  </td>
+                  <td>
+                    {{trot.price}}
+
+                  </td>
+                  <td>
+                    {{trot.description}}
+                  </td>
+
+
+                  <td>
+                    <img
+                            class="rounded-circle mr-1"
+                            src="http://localhost:8083/trottinette/Imgarticles/+{{trot.id}}"
+                            height="50"
+                            width="50"
+
+                    />
+                  </td>
+                  <td>
+                    <button class="btn btn-warning" (click)="goToEdit(trot.id) " style="background-color: rgb(255, 187, 0);"><i style="font-size: 15px; " class="now-ui-icons ui-1_settings-gear-63"></i></button> &nbsp;
+
+                    <button (click)="deleteProduct(trot)" class="btn btn-danger"  style="background-color:red" type="button">
+                      <i class="now-ui-icons ui-1_simple-remove"></i></button>
+                  </td>
+
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+</div>
