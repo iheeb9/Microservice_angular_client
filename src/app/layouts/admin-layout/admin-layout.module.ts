@@ -15,18 +15,30 @@ import { DetailsTrottinetteComponent } from './trottinette/details-trottinette/d
 import { ListTrottinetteComponent } from './trottinette/list-trottinette/list-trottinette.component';
 import {NgMultiSelectDropDownModule} from 'ng-multiselect-dropdown';
 
+import { ListBaladeComponent } from './balade/list-balade/list-balade.component';
+import { AddBaladeComponent } from './balade/add-balade/add-balade.component';
+import { UpdateBaladeComponent } from './balade/update-balade/update-balade.component';
+
+import { LocationComponent } from './location/location.component';
+import { AddLocationComponent } from './location/add-location/add-location.component';
+import { UpdateLocationComponent } from './location/update-location/update-location.component';
+import {ChartsModule} from 'ng2-charts';
+
+
 @NgModule({
   imports: [
     CommonModule,
     RouterModule.forChild(AdminLayoutRoutes),
+    ChartsModule,
+    ReactiveFormsModule,
     NgbModule,
     FormsModule,
-    ReactiveFormsModule  ,
     NgMultiSelectDropDownModule.forRoot()
     ,
   ],
   declarations: [
     DashboardComponent,
+
 
     AjouterCategorieComponent,
     ModifierCategorieComponent,
@@ -35,6 +47,15 @@ import {NgMultiSelectDropDownModule} from 'ng-multiselect-dropdown';
     ModifierTrottinetteComponent,
     DetailsTrottinetteComponent,
     ListTrottinetteComponent,
+
+    ListBaladeComponent,
+    AddBaladeComponent,
+    UpdateBaladeComponent,
+
+    LocationComponent,
+    AddLocationComponent,
+    UpdateLocationComponent,
+
   ]
 })
 

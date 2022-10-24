@@ -1,0 +1,43 @@
+<div class="wrapper">
+    <div class="sidebar" data-color="red">
+        <app-sidebar></app-sidebar>
+    </div>
+    <div class="main-panel">
+        <app-navbar></app-navbar>
+
+    </div>
+    <div class="container">
+        <router-outlet></router-outlet>
+        <br>
+        <br>
+        <h2>Event List </h2>
+        <br>
+        <button class="btn btn-success"  routerLink="/event/add">Add Event</button>
+        <table class="table">
+            <thead color="blue">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Action</th>
+
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let e of events">
+
+                    <th scope="row">{{e.id}}</th>
+                    <td>{{ e.title }}</td>
+                    <td>{{ e.description }}</td>
+                    <td><button class="btn btn-primary" routerLink="/event/{{e.id}}">Edit</button>
+                        <button class="btn btn-danger"(click)="onDelete(e.id)">Delete</button>
+                    </td>
+                </tr>
+
+
+            </tbody>
+        </table>
+
+    </div>
+</div>

@@ -1,0 +1,78 @@
+<div class="panel-header panel-header-sm">
+</div>
+<div class="main-content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title"> List Locations</h4>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <div class="col-md-3">
+                            <button class="btn btn-block btn-round"  [routerLink]="['/admin/addlocation']"  style="background-color: #ff3636;">
+            
+                                New </button>
+            
+                          </div>
+                        <table class="table">
+                            <thead class=" text-primary">
+                                <th>
+                                    Id
+                                </th>
+                                <th>
+                                    Date Start
+                                </th>
+                                <th>
+                                    Date End
+                                </th>
+                                <th>
+                                    User
+                                </th>
+                                <th>
+                                    Trottinette
+                                </th>
+                                <th >
+                                    Action
+                                </th>
+                            </thead>
+                            <tbody *ngFor=" let location of ListLocation  ">
+                                <tr>
+                                    <td>
+                                        {{location.id}}
+                                    </td>
+                                    <td>
+                                        {{location.dateStart}}
+                                    </td>
+                                    <td>
+                                        {{location.dateEnd}}
+                                    </td>
+                                    <td>
+                                        {{location.userId}}
+                                    </td>
+                                    <td>
+                                        {{location.trottinette.name}}
+                                    </td>
+                                    <td >
+                                        <div class="d-flex ">
+                                            <button class="btn btn-sm" style="background-color:'#ff3636' ;" [routerLink]="['/admin/updatelocation/'+location.id]"><i class="fa fa-edit"></i></button>
+                                            <button class="btn btn-sm" style="margin-left:10px ; background-color:'#ff3636' ;" (click)="delete(location.id)"><i class="fa fa-trash"></i></button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    
+                    </div>
+                </div>
+                <div class="card-footer text-muted" style="margin-left: 25%;">
+
+                    <ngb-pagination [boundaryLinks]="true"  [collectionSize]="collectionSize"
+                        [(page)]="page" [pageSize]="pageSize" (pageChange)="nextPage($event);"
+                        class="pagination-primary">
+                    </ngb-pagination>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>

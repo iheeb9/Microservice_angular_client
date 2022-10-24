@@ -1,0 +1,38 @@
+<div class="wrapper">
+    <div class="sidebar" data-color="red">
+        <app-sidebar></app-sidebar>
+    </div>
+    <div class="main-panel">
+        <app-navbar></app-navbar>
+
+    </div>
+    <div class="container">
+        <router-outlet></router-outlet>
+        <br>
+        <br>
+        <h2>Event Add </h2>
+        <br>
+<div style="width: 500px; margin: auto;">
+    <div class="submit-form">
+      <div *ngIf="!isEventAdded">
+        <div class="form-group">
+          <label for="title">Title</label>
+          <input type="text" class="form-control" id="title" required [(ngModel)]="event.title" name="title" />
+        </div>
+  
+        <div class="form-group">
+          <label for="description">Description</label>
+          <input class="form-control" id="description" required [(ngModel)]="event.description" name="description" />
+        </div>
+  
+        <button (click)="addBook()" class="btn btn-success">Create</button>
+      </div>
+  
+      <div *ngIf="isEventAdded">
+        <h3>New Event added!</h3>
+        <button class="btn btn-success" (click)="newEvent()"> + Add More</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
