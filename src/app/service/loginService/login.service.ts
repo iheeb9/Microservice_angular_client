@@ -9,10 +9,10 @@ import { environment } from '../../../environments/environment';
 })
 export class LoginService {
 
-  constructor(private http:HttpClient,) { }
-
-
+  constructor(private http:HttpClient) { }
   Login_url=environment.url
+
+  
   LoginApi(form:LoginRequest) {
     return this.http.post(this.Login_url+'signin', form);
     

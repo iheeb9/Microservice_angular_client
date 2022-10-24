@@ -1,0 +1,48 @@
+<div class="wrapper">
+    <div class="container">
+    <div class="section">
+     
+          <div>
+           <div class="row"  style="margin-top: 50px;">
+            <br> <br>
+            
+            <div class="col-md-8">
+                <img src="assets/img/balade.jpg" alt=""  style="width: 500%;" class="img-raised">
+                <h3 class="title">{{balade.titre}}</h3>
+               <div  class="row">
+                <div class="d-flex col-md-3 "><div  style="  font-weight: bold ;" > nombre :  </div><p style="margin-left:5px ;">{{balade.nombre}} 
+                Personne</p></div>
+                <div class="d-flex col-md-3 "><div  style="  font-weight: bold ;" > distance :  </div><p style="margin-left:5px ;">{{balade.distance}} KM</p></div>
+                <div class="d-flex col-md-3 "><div  style="  font-weight: bold ;" > prix :  </div><p style="margin-left:5px ;" >{{balade.prix}} DT</p></div>
+               
+
+               </div>
+
+               
+               <div  ><div  style="  font-weight: bold ;" > Guide :  </div><p>{{balade.guide_accompagnateur}}</p></div>
+               <div  ><div  style="  font-weight: bold ;" > description :  </div><p>{{balade.description}}</p></div>
+            </div>
+            <div class="col-md-4">
+    
+          <p style="font-weight: bold ;"  > choisir votre velo et reserver</p>
+
+            <div class="form-group">
+         
+              <select [(ngModel)]="bike"  name="dropdownOption" id="dropdownOption" class='form-control'>
+          
+                <option selected value="1">VTT</option>
+                <option value="2">VTT</option>
+                <option value="3">VTT</option>
+                </select> </div>
+                <div *ngIf="bike" class="text-center">
+                    <button type="button" class="btn btn-primary btn-round " (click)="reserver()">réserver</button>
+                  </div>
+ 
+        </div>
+    </div>
+</div>
+  
+
+    </div>
+
+</div>

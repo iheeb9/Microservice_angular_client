@@ -5,7 +5,11 @@
 
 export const environment = {
   production: false,
+
+  url:"/balade/"
+
   url:"/auth/",
   serveur:"http://localhost:8082/api/locations"
+
 
 };

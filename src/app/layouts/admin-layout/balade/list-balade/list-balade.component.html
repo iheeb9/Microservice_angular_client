@@ -1,0 +1,112 @@
+<div class="panel-header panel-header-sm">
+ 
+</div>
+
+<div class="main-content">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="card">
+          <div class="card-header">
+            <!-- <h5 class="card-category">demande  de conge</h5> -->
+            <div class="d-flex justify-content-between" >
+            
+                <form>
+                  <div class="input-group no-border">
+                    <input type="text" value="" class="form-control" placeholder="Search... "  (ngModelChange)="search($event)" [ngModel]="key" name="key" >
+                    <div class="input-group-append">
+                      
+                      <div class="input-group-text">
+                        <i class="now-ui-icons ui-1_zoom-bold"></i>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+            
+           
+              <div >
+                <button class="btn btn-block btn-round"  [routerLink]="['/admin/add_balade']"  style="background-color: #ff3636;">
+            
+                    New </button>
+                
+              </div>
+              </div>
+          
+          <div class="card-body">
+            <div class="table">
+              <table  class="table">
+                <thead class=" text-primary text-center">
+                  <th class="text-left">
+                    titre
+                  </th>
+                  <th>
+                    guide_accompagnateur
+                  
+                  </th>
+                  <th>
+                    prix
+                  </th>
+                  <th >
+                    nombre
+                  </th>
+                  <th class="text-right">
+                  
+                    disponible
+                  </th> 
+                  <th class="text-right">
+                    distance
+                  </th>
+                  <th >
+                 action
+                  </th>
+                </thead>
+                <tbody *ngFor=" let balade of listbalade  ">
+                  <tr class="text-center">
+                    <td class="text-left">
+                        {{balade.titre}}
+                    </td>
+                    <td>
+                        {{balade.guide_accompagnateur}}
+                    </td>
+                
+                    <td >
+                        {{balade.prix}}
+                    </td>
+                    <td >
+                        {{balade.nombre}}
+                    </td>
+                    <td class="text-right" *ngIf="balade.disponible=='disponible'">
+                      <span class="badge badge-success" >Disponible</span>
+                    </td>
+                    <td class="text-right"  *ngIf="balade.disponible=='non_disponible'">
+                        <span class="badge badge-danger" >Non disponible</span>
+                      </td>
+                      <td class="text-right"  *ngIf="balade.disponible=='reporte'">
+                        <span class="badge badge-warning" >Reporté</span>
+                      </td>
+                    <td>   {{balade.nombre}}
+
+                    </td>
+                    <td  >  
+                        <div class="d-flex ">
+                        <button  [routerLink]="['/admin/update_balade',balade.id]" class="btn btn-info btn-sm"  ><i class="fa fa-edit"></i></button>
+                        <button  (click)="delete(balade.id)" class="btn btn-info btn-sm" style="margin-left:10px ;" ><i class="fa fa-trash"></i></button>
+                    </div>
+                    </td>
+                  </tr>
+                     
+                </tbody>
+              </table>
+              <!-- <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" [pageSize]="5" [length]="totalElements" (page)="nextPage($event)"> </mat-paginator> -->
+              <ngb-pagination  
+              [boundaryLinks]="true"  [maxSize]="3" [collectionSize]="collectionSize" [(page)]="page" [pageSize]="pageSize" (pageChange)="nextPage($event);" class="pagination-primary">
+              </ngb-pagination>
+          
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+
+</div>
+</div>  
+

@@ -8,10 +8,12 @@ import { ComponentsModule } from 'app/components/components.module';
 import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ToastrModule } from 'ngx-toastr';
+import { AllBaladeComponent } from './balade/all-balade/all-balade.component';
+import { DetailBaladeComponent } from './balade/detail-balade/detail-balade.component';
 
 
 @NgModule({
-  declarations: [HomeComponent
+  declarations: [HomeComponent, AllBaladeComponent, DetailBaladeComponent
   ],
   imports: [
     CommonModule,

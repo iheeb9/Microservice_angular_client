@@ -7,15 +7,22 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ChartsModule } from 'ng2-charts';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ToastrModule } from 'ngx-toastr';
+
+import { ListBaladeComponent } from './balade/list-balade/list-balade.component';
+import { AddBaladeComponent } from './balade/add-balade/add-balade.component';
+import { UpdateBaladeComponent } from './balade/update-balade/update-balade.component';
+
 import { LocationComponent } from './location/location.component';
 import { AddLocationComponent } from './location/add-location/add-location.component';
 import { UpdateLocationComponent } from './location/update-location/update-location.component';
+
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule.forChild(AdminLayoutRoutes),
     FormsModule,
+    ReactiveFormsModule,
     ChartsModule,
     ReactiveFormsModule,
     NgbModule,
@@ -23,9 +30,15 @@ import { UpdateLocationComponent } from './location/update-location/update-locat
   ],
   declarations: [
     DashboardComponent,
+
+    ListBaladeComponent,
+    AddBaladeComponent,
+    UpdateBaladeComponent,
+
     LocationComponent,
     AddLocationComponent,
     UpdateLocationComponent,
+
   ]
 })
 
