@@ -10,10 +10,13 @@ import { ToastrModule } from 'ngx-toastr';
 import { TrottinetteComponent } from './trottinette/trottinette/trottinette.component';
 import { AllBaladeComponent } from './balade/all-balade/all-balade.component';
 import { DetailBaladeComponent } from './balade/detail-balade/detail-balade.component';
+import { AddpostComponent } from './review/addpost/addpost.component';
+import { ListComponent } from './review/list/list.component';
+import { ShowFrontComponent } from './review/show-front/show-front.component';
 
 
 @NgModule({
-  declarations: [HomeComponent, AllBaladeComponent, DetailBaladeComponent,TrottinetteComponent
+  declarations: [HomeComponent, AllBaladeComponent, DetailBaladeComponent,TrottinetteComponent,ListComponent, ShowFrontComponent, AddpostComponent
   ],
     imports: [
         CommonModule,

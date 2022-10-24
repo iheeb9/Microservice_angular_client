@@ -1,0 +1,55 @@
+<div class="panel-header panel-header-sm">
+</div>
+<div class="main-content">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="title">Add Review</h5>
+        </div>
+        <div class="card-body">
+          <form [formGroup]="editForm" (ngSubmit)="submit()">
+            <div class="row">
+              <div class="col-md-5 pr-1">
+                <div class="form-group">
+                  <label>Titre </label>
+                  <input type="text" class="form-control"   formControlName="titre" id="titre"    >
+             
+                  <div class="err" *ngIf=" f.titre.invalid &&(f.titre.touched ||f.titre.touched)">
+                      <div *ngIf="f.titre.errors.required" class="text-danger">Titre is required
+                       </div>
+                 
+                </div>
+                </div>
+              </div>
+          
+             
+            </div>
+
+            <div class="col-md-4 pr-1">
+              <i class="now-ui-icons arrows-1_cloud-upload-94"></i>
+              <div class="form-group" >
+                  <label >click Here to uplaod </label>
+                  <input   type="file" accept="image/*" (change)="onSelectFile($event)" style="cursor: pointer" class="form-control" placeholder="image Review " >
+          </div>
+          </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label>Description</label>
+                  <textarea rows="4" cols="80" class="form-control" placeholder="Here can be your description" placeholder="Description"  formControlName="description" id="description"   ></textarea>
+             
+                  
+            </div>
+              </div>
+            </div>
+            <button  type="submit" class="btn btn-success btn-lg" rippleEffect>
+                Add
+           </button>  
+          </form>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>

@@ -1,0 +1,45 @@
+<div class="panel-header panel-header-sm">
+</div>
+<div class="main-content">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="title">Add Review</h5>
+        </div>
+        <div class="card-body">
+          <form [formGroup]="editForm" (ngSubmit)="submit()">
+            <div class="row">
+              <div class="col-md-5 pr-1">
+                <div class="form-group">
+                  <label>Titre </label>
+                  <input type="text" class="form-control"   formControlName="subject" id="titre"    >
+             
+                 
+                </div>
+              </div>
+          
+             
+            </div>
+
+           
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label>commentaire</label>
+                  <textarea rows="4" cols="80" class="form-control" placeholder="Here can be your commentaire" placeholder="commentaire"  formControlName="commentaire" id="description"   ></textarea>
+             
+                  
+            </div>
+              </div>
+            </div>
+            <button  type="submit" class="btn btn-success btn-lg" rippleEffect>
+                Add
+           </button>  
+          </form>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>

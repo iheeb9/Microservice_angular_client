@@ -23,6 +23,10 @@ import { LocationComponent } from './location/location.component';
 import { AddLocationComponent } from './location/add-location/add-location.component';
 import { UpdateLocationComponent } from './location/update-location/update-location.component';
 import {ChartsModule} from 'ng2-charts';
+import { UpdateReviewComponent } from './review/update-review/update-review.component';
+import { CreateComponent } from './review/create/create.component';
+import { ListComponent } from './review/list/list.component';
+import { ShowReviewComponent } from './review/show-review/show-review.component';
 
 
 @NgModule({
@@ -38,8 +42,6 @@ import {ChartsModule} from 'ng2-charts';
   ],
   declarations: [
     DashboardComponent,
-
-
     AjouterCategorieComponent,
     ModifierCategorieComponent,
     ListeCategorieComponent,
@@ -47,11 +49,13 @@ import {ChartsModule} from 'ng2-charts';
     ModifierTrottinetteComponent,
     DetailsTrottinetteComponent,
     ListTrottinetteComponent,
-
     ListBaladeComponent,
     AddBaladeComponent,
     UpdateBaladeComponent,
-
+    UpdateReviewComponent,
+    CreateComponent,
+    ListComponent,
+    ShowReviewComponent,
     LocationComponent,
     AddLocationComponent,
     UpdateLocationComponent,
