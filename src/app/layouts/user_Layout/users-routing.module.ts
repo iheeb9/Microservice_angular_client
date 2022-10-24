@@ -18,7 +18,7 @@ const routes: Routes = [
   },
   { path: 'home', component: HomeComponent},
   {path: 'trot', component: TrottinetteComponent},
-  { path: 'Listreview', component:ListComponent},
+  { path: 'ListReview', component:ListComponent},
   { path: 'showReview/:id', component:ShowFrontComponent},
   { path: 'AddPost/:id', component:AddpostComponent},
 
