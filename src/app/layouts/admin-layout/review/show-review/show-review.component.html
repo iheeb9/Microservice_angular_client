@@ -1,0 +1,68 @@
+<div >
+    <div class="card card-user">
+      <div class="image">
+      </div>
+      <div class="card-body">
+        <div class="author">
+          <a href="#">
+            <img class="avatar border-gray" style="height: 300px; width:600px;" src="http://localhost:8083/Trotti/Imgarticles/+{{this.id}}" alt="...">
+            <h5 class="title">{{review.titre}}</h5>
+          </a>
+          <p class="description">
+          
+          </p>
+        </div>
+        <p class="description text-center">
+            {{review.description}}
+        </p>
+      </div>
+      <hr>
+      <div class="button-container">
+        <button href="#" class="btn btn-neutral btn-icon btn-round btn-lg">
+          <i class="fab fa-facebook-f"></i>
+        </button>
+        <button href="#" class="btn btn-neutral btn-icon btn-round btn-lg">
+          <i class="fab fa-twitter"></i>
+        </button>
+        <button href="#" class="btn btn-neutral btn-icon btn-round btn-lg">
+          <i class="fab fa-google-plus-g"></i>
+        </button>
+      </div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table">
+            <thead class=" text-primary">
+              <th>
+                subject
+              </th>
+              <th>
+                commentaire
+              </th>
+              <th class="text-right">
+                Action
+              </th>
+            </thead>
+            <tbody *ngFor="let p of post">
+              <tr>
+                <td>
+                    {{p.subject}}
+                </td>
+                <td>
+                    {{p.commentaire}}
+                 
+                </td>
+                <td class="text-right">
+                
+                  <button (click)="deleteReview(p)" class="btn btn-danger"  style="background-color:red" type="button">
+                    <i class="now-ui-icons ui-1_simple-remove"></i></button>
+                    &nbsp;
+               
+                </td>
+              </tr>
+          
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>

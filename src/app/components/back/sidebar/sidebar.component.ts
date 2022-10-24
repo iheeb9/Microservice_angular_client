@@ -14,7 +14,7 @@ export const ROUTES: RouteInfo[] = [
     { path: 'location', title: 'location',  icon:'users_single-02', class: '' },
     { path: '', title: 'evennement',  icon:'users_single-02', class: '' },
     { path: '', title: 'association',  icon:'users_single-02', class: '' },
-    { path: '', title: 'review',  icon:'users_single-02', class: '' },
+    { path: 'ListReview', title: 'review',  icon:'users_single-02', class: '' },
     { path: 'list_balade', title: 'balade',  icon:'users_single-02', class: '' },
 
   //  { path: '/table-list', title: 'Table List',  icon:'design_bullet-list-67', class: '' },

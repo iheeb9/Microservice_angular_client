@@ -1,0 +1,57 @@
+<div class="panel-header panel-header-sm">
+</div>
+<div class="main-content">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">      
+        <div class="card-header">
+          <h4 class="card-title"> Reviews</h4>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table">
+              <thead class=" text-primary">
+                <th>
+                  titre
+                </th>
+                <th>
+                  description
+                </th>
+                <th>
+                  image
+                </th>
+                <th class="text-right">
+                  Action
+                </th>
+              </thead>
+              <tbody *ngFor="let rev of review">
+                <tr>
+                  <td>
+                    {{rev.titre}}
+                  </td>
+                  <td>
+                    {{rev.description}}
+                  </td>
+                  <td>
+                    <img
+                    class="rounded-circle mr-1"
+                    src="http://localhost:8083/Trotti/Imgarticles/+{{rev.id}}"
+                    height="300"
+                    width="300"
+
+            />
+                  </td>
+                  <td class="text-right">
+                     <button (click)="show(rev.id)" class="btn btn-primary"  style="background-color:rgb(162, 162, 162)" type="button">
+                  show</button>
+                  </td>
+                </tr>
+            
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

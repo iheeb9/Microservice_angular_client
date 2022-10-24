@@ -5,15 +5,18 @@
 
 export const environment = {
   production: false,
-<<<<<<< HEAD
-  url:"http://localhost:8083/trottinette" 
-=======
 
+
+  urlt:"http://localhost:8083/trottinette" 
+,
   url:"/balade/"
+,
 
-  url:"/auth/",
-  serveur:"http://localhost:8082/api/locations"
+  urla:"/auth/",
+
+  serveur:"http://localhost:8082/api/locations",
+
+ urlr:"http://localhost:8083/Trotti/"
 
 
->>>>>>> de64238a43421a5f52f290dd69b84efc5ee5d262
 };
