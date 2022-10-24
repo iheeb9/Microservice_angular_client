@@ -19,8 +19,20 @@ export class BaladeserviceService {
     .set('search', o.search)
     return this.http.get<balade[]>(this.Login_url+'get_balade',{params});
   }
-  add_balade(balade:balade){
+  add_balade_or_update(balade:balade){
     return this.http.post (this.Login_url+'add_balade',balade);
 
   }
+
+   get_balade_byid(id:number){
+  return this.http.get<balade> (this.Login_url+'getbaladebyid/'+id);
+
+}
+delete_balade(id:number){
+  return this.http.delete<balade> (this.Login_url+'deletebalde/'+id);
+
+}
+add_participations(veloid:number,userid:number){
+  return this.http.get<balade> (this.Login_url+'add_participation/'+veloid+'/'+userid);
+}
 }

@@ -33,7 +33,7 @@
           
           <div class="card-body">
             <div class="table">
-              <table *ngIf="!loading " class="table">
+              <table  class="table">
                 <thead class=" text-primary text-center">
                   <th class="text-left">
                     titre
@@ -88,8 +88,8 @@
                     </td>
                     <td  >  
                         <div class="d-flex ">
-                        <button class="btn btn-info btn-sm"  ><i class="fa fa-edit"></i></button>
-                        <button  class="btn btn-info btn-sm" style="margin-left:10px ;" ><i class="fa fa-trash"></i></button>
+                        <button  [routerLink]="['/admin/update_balade',balade.id]" class="btn btn-info btn-sm"  ><i class="fa fa-edit"></i></button>
+                        <button  (click)="delete(balade.id)" class="btn btn-info btn-sm" style="margin-left:10px ;" ><i class="fa fa-trash"></i></button>
                     </div>
                     </td>
                   </tr>
@@ -106,9 +106,7 @@
         </div>
       </div>
       </div>
-      <div class="col-md-4">
-        <hr><hr>
-        <img src="https://img.freepik.com/free-vector/bike-trial-concept-illustration_114360-9254.jpg?w=2000">
-      </div>
+
 </div>
 </div>  
+

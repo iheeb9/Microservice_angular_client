@@ -9,6 +9,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ToastrModule } from 'ngx-toastr';
 import { ListBaladeComponent } from './balade/list-balade/list-balade.component';
 import { AddBaladeComponent } from './balade/add-balade/add-balade.component';
+import { UpdateBaladeComponent } from './balade/update-balade/update-balade.component';
 
 @NgModule({
   imports: [
@@ -24,6 +25,7 @@ import { AddBaladeComponent } from './balade/add-balade/add-balade.component';
     DashboardComponent,
     ListBaladeComponent,
     AddBaladeComponent,
+    UpdateBaladeComponent,
   ]
 })
 
