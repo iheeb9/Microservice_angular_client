@@ -7,6 +7,15 @@
 "changeOrigin": true,
 "pathRewrite": {"^/auth" : ""}
 },
+"/associations/*": {
+    "target": "http://localhost:8083/associations",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true,
+    "pathRewrite": {
+        "^/associations": ""
+    }
+},
 "/trottinette/*": {
     "target": "http://localhost:8083/trottinette",
     "secure": false,

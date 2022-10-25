@@ -29,9 +29,7 @@ const routes: Routes =[
   { path: 'event/add', component: AddEventComponent },
 
     /* -------------- ASSOCIATIONS ----------------- */
-    { path: 'associations', component: AssociationsListComponent },
-    { path: 'associations/:id', component: AssociationDetailsComponent },
-    { path: 'add-association', component: AddAssociationComponent },
+ 
 
     /*-------------------Events--------------------------*/
 

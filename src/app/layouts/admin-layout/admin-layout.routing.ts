@@ -1,3 +1,6 @@
+import { AddAssociationComponent } from './../../components/back/associations/add-association/add-association.component';
+import { AssociationDetailsComponent } from './../../components/back/associations/association-details/association-details.component';
+import { AssociationsListComponent } from './../../components/back/associations/association-list/associations-list.component';
 import { ModifierCategorieComponent } from './categorie/modifier-categorie/modifier-categorie.component';
 import { DetailsTrottinetteComponent } from './trottinette/details-trottinette/details-trottinette.component';
 import { ModifierTrottinetteComponent } from './trottinette/modifier-trottinette/modifier-trottinette.component';
@@ -52,5 +55,7 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'addlocation',      component: AddLocationComponent },
     { path: 'updatelocation/:id',      component: UpdateLocationComponent },
 
-
+    { path: 'associations', component: AssociationsListComponent },
+    { path: 'associations/:id', component: AssociationDetailsComponent },
+    { path: 'add-association', component: AddAssociationComponent },
 ];

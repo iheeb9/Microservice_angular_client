@@ -13,7 +13,7 @@ export const ROUTES: RouteInfo[] = [
     { path: '', title: 'trottinette',  icon:'users_single-02', class: '' },
     { path: 'location', title: 'location',  icon:'users_single-02', class: '' },
     { path: '', title: 'evennement',  icon:'users_single-02', class: '' },
-    { path: '', title: 'association',  icon:'users_single-02', class: '' },
+    { path: 'associations', title: 'associations',  icon:'users_single-02', class: '' },
     { path: 'ListReview', title: 'review',  icon:'users_single-02', class: '' },
     { path: 'list_balade', title: 'balade',  icon:'users_single-02', class: '' },
 

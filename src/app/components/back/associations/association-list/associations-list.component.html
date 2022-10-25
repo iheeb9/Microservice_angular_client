@@ -34,7 +34,7 @@
     <button class="m-3 btn btn-sm btn-danger" (click)="removeAllAssociations()">
       Remove All
     </button>
-    <a class="btn btn-success" routerLink="/add-association">Add association</a>
+    <a class="btn btn-success" routerLink="/admin/add-association">Add association</a>
   </div>
   <div class="col-md-6">
     <div *ngIf="currentAssociations">
@@ -45,7 +45,7 @@
      
   
 
-      <a class="badge badge-warning" routerLink="/associations/{{ currentAssociation.id }}">
+      <a class="badge badge-warning" routerLink="/admin/associations/{{ currentAssociation.id }}">
         Edit
       </a>
     </div>
