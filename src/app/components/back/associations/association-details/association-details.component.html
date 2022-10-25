@@ -1,0 +1,40 @@
+<div>
+  <div *ngIf="currentAssociation.id" class="edit-form">
+    <h4>Association</h4>
+    <form>
+      <div class="form-group">
+        <label for="nom">Nom</label>
+        <input
+          type="text"
+          class="form-control"
+          id="nom"
+          [(ngModel)]="currentAssociation.nom"
+          name="nom"
+        />
+      </div>
+     
+
+     
+    </form>
+
+ 
+
+    <button class="badge badge-danger mr-2" (click)="deleteAssociation()">
+      Delete
+    </button>
+
+    <button
+      type="submit"
+      class="badge badge-success mb-2"
+      (click)="updateAssociation()"
+    >
+      Update
+    </button>
+    <p>{{ message }}</p>
+  </div>
+
+  <div *ngIf="!currentAssociation.id">
+    <br />
+    <p>Cannot access this Association...</p>
+  </div>
+</div>
